@@ -1,0 +1,531 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Fraunces;
+    src: url(fonts/static/Fraunces_72pt/Fraunces_72pt-Bold.ttf);
+}
+@font-face {
+    font-family: Barlow;
+    src: url(fonts/Barlow-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Frau;
+    src: url(fonts/static/Fraunces_9pt/Fraunces_9pt-Black.ttf);
+}
+body{
+    font-size: 18px;
+    width: 1440px;
+    margin: auto;
+}
+
+.topsec{
+    color: hsl(0, 0%, 100%);
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url(images/desktop/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    align-items: center;
+}
+.topulphone{
+    display: none;
+}
+.tophea{
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 25px 0px 25px;
+    margin-bottom: 25px;
+}
+.toph{
+    flex: 1;
+    font-family: Fraunces;
+    font-size: 1.3em;
+}
+.topul{
+    font-family: Barlow;
+    flex: 0.5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: capitalize;
+    list-style: none;
+    font-size: 14px;
+}
+.topul .contact{
+    font-family: Fraunces;
+    text-transform: uppercase;
+    color: hsl(212, 27%, 19%);
+    padding:  10px 15px 10px 15px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.topul .contact:hover{
+    color:hsl(0, 0%, 100%); ;
+    background-color: hsl(202, 90%, 59%);
+    cursor: pointer;
+}
+
+.topsvg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.toptitle{
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    font-family: Frau;
+    margin-top: 15vh;
+    font-size: 2em;
+}
+
+.midsec{
+    height: 180vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+    gap: 0;
+    font-family: Barlow;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.grid1{
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    justify-content: center;
+    padding-left: 100px;
+    background-color:hsl(0, 100%, 98%);
+
+}
+.grid1 h1{
+    font-family: Frau;  
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+.grid1 p , .grid1 a{
+    max-width: 100%;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color :hsl(232, 10%, 55%);
+}
+.grid1 a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: hsl(212, 27%, 19%);
+    font-family: Frau;
+    font-size: 14px;
+    position: relative;
+    padding-left: 5px;
+    z-index: 20;
+  
+}
+.littlebox{
+    display: none;
+}
+.grid1 a:after{
+    position: absolute;
+    content: '';
+    height: 8px;
+    bottom: -1px; 
+    margin: center auto;
+	left: 0;
+    right: 0;
+	width:105%;
+	background: hsl(51, 100%, 49%);
+	border-radius : 5px;
+    z-index: -1;
+	opacity: 0.3;
+    transition:.5s;
+}
+.grid1 a:hover:after{
+    opacity: 1;
+}
+.grid2{
+    background: url(images/desktop/image-transform.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.grid3{
+    background: url(images/desktop/image-stand-out.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.grid4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:hsl(167, 40%, 24%);
+}
+.grid4 h1{
+    font-family: Frau;
+    font-size: 1.1em;
+    margin-top: 50%;
+    margin-bottom: 5%;
+}
+
+.grid4 p{
+    width: 55%;
+}
+.one{
+    background: url(images/desktop/image-graphic-design.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.two{
+    background: url(images/desktop/image-photography.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.botsec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    background-color: hsl(0, 100%, 98%);
+}
+
+.bottitle{
+    font-family: Frau;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: hsl(210, 4%, 67%);
+}
+
+.clients{
+    font-family: Barlow;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    margin-top: 10vh;
+}
+
+.client{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.client .imag{
+    border-radius: 50%;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 8vh;
+}
+
+.imag img{
+    position: absolute;
+    top: 0;
+    inset: 1;
+    overflow: hidden;
+    left: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.client .desc{
+    color: hsl(213, 9%, 39%);
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.client h3 {
+    font-family: Frau;
+    margin-bottom: 1vh;
+}
+
+.client .work{
+    color: hsl(210, 4%, 67%);
+    font-size: 14px;
+}
+
+.images{
+    height: 45vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 0;
+    row-gap: 0;
+}
+.ima {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.ima img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+footer{
+    height: 30vh;
+    background-color: hsl(168, 50%, 59%);
+    color: hsl(167, 40%, 24%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    list-style: none;
+    font-size: 14px;
+    font-family: Barlow;
+    margin-top: 40px;
+}
+footer ul li:hover{
+    color: white;
+    cursor: pointer;
+}
+
+footer h3{
+    font-family: Frau;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 10%;
+    margin-top: 80px;
+}
+
+.social img:hover{
+    fill: white;
+    cursor: pointer;
+}
+
+.menu{
+    display: none;
+}
+
+@media only screen  and (max-width:375px){
+    body{
+        width:375px;
+        font-size: 14px;
+    }
+    .topsec{
+        background-image: url(images/mobile/image-header.jpg);
+        align-items: center;
+    }
+    .topul{
+        display: none;
+    }
+    .menu{
+        display: block;
+        opacity: 0.5;
+    }
+    .toph{
+        flex: 1;
+        font-family: Fraunces;
+        font-size: 1.2em;
+    }
+    .toptitle{
+        width: 100%;
+        text-align: center;
+    }
+    .topsvg{
+        top: 65%;
+    }
+    .midsec{
+        height: 300vh;
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        row-gap: 0px;
+    }
+    .grid1 ,.grid2 ,.grid3 ,.grid4{
+        height: 50vh;
+        width: 100%;
+    }
+    .grid1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color:hsl(0, 100%, 98%);  
+        text-align: center;
+        padding-left: 0px;
+    }
+    .topone{
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .grid1 h1{
+        font-family: Frau;  
+        max-width: 100%;
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+    .grid1 p , .grid1 a{
+        font-size: 18px;
+        align-self: center;
+    }
+    .grid1 p{
+        max-width: 80%;
+    }
+    .grid2{
+        background: url(images/mobile/image-transform.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-row-start: 0;
+        grid-row-end: 1;
+    }
+    .grid3{
+        background: url(images/mobile/image-stand-out.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .grid4 h1{
+        font-family: Frau;
+        font-size: 1.3em;
+        margin-top: 65%;
+        margin-bottom: 5%;
+    }
+    
+    .grid4 p{
+        width: 80%;
+        text-align: center;
+    }
+    .botsec{
+        width: 100%;
+        height: 140vh;
+    }
+    .bottitle{
+        margin-top: 0vh;
+    }
+    .clients{
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin-top: 5vh;
+        row-gap: 0px;
+    }
+    .client .imag{
+        border-radius: 50%;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 3vh;
+    }
+    .client .desc{
+        color: hsl(213, 9%, 39%);
+        text-align: center;
+        width: 80%;
+        margin-bottom: 3vh;
+        font-size: 16px;
+    }
+    .client .work{
+        margin-bottom: 8vh;
+    }
+    .images{
+        height: 50vh;
+        grid-template-columns: repeat(2,1fr);  
+    }
+    footer h3{
+        font-family: Frau;
+        font-size: 1.5em;
+    }
+    footer ul{
+        justify-content: space-around;
+        width: 100%;
+    }
+    .socials{
+        width: 50%;
+    }
+    .topulphone{
+        width: 90%;
+        height: 35vh;
+        position: absolute;
+        top: 20vh;
+        left: 5vw;
+        background-color:hsl(0, 40%, 98%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+ 
+    .littlebox{
+        display: block;
+        background-color: transparent;
+        width: 13vw;
+        height: 5vh;
+        position: absolute;
+        right: 5vw;
+        top: 15vh;
+    }
+    .littlebox:after {
+        position: absolute;
+        content: '';
+        height: 0px;
+        width: 0px;
+        top: 15px;
+        right: 0;
+        bottom: -100px;
+        border-width: 15px 20px;
+        border-style: solid;
+        border-color: transparent hsl(0, 40%, 98%) hsl(0, 40%, 98%) transparent;
+    }
+    .show{
+        display: none;
+    }
+    .topulph{
+        list-style: none;
+        color: hsl(210, 4%, 67%);
+    }
+    .topulph li{
+        margin-bottom: 3vh;
+    }
+    .topulph .contact{
+        font-family: Fraunces;
+        text-transform: uppercase;
+        color: hsl(212, 27%, 19%);
+        padding:  10px 20px 10px 20px;
+        background-color: hsl(51, 100%, 49%);
+        border-radius: 20px;
+        font-size: 12px;
+        align-self: center;
+        margin-left: -5vw;
+    }
+}
